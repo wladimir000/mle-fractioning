@@ -2,7 +2,7 @@
 
 You will get a [jupyter notebook](./King-County.ipynb), with some EDA, Data cleaning, Feature Engineering and some ML models. The necessary libraries are listed in the [requirements.txt](./requirements.txt) file. You will have to do the following:
 
-- Refactor the code for the data cleaning and feature engineering segments into python files 
+- Refactor the code for the data cleaning and feature engineering segments into python files.
 - Build a pipeline for the data cleaning, feature engineering.
 
 If you still have time:
