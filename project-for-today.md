@@ -4,7 +4,9 @@ You will get a [jupyter notebook](./King-County.ipynb), with some EDA, Data clea
 
 - Refactor the code into python files 
 - Build a pipeline for the data cleaning, feature engineering.
-- Build a FastAPI app, that allows you to Create, Read, Update, and Delete houses to/from a database.
+
+If you still have time:
+- Build a FastAPI app, that allows you to Create, Read, Update, and Delete houses with 5 features to/from a database. 
 - Create a Dockerfile for the app.
 - Run the app in a docker container.
 
