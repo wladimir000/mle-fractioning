@@ -10,9 +10,9 @@ If you still have time:
 - Create a Dockerfile for the app.
 - Run the app in a docker container.
 
-BONUS: Write tests!
+**BONUS:** Write tests!
 
-Push the code to your github repo and share the link with us in slack if it is a privat repo invite us as collaborators.
+Push the code to your github repo and share the link with us in Discord. If it is a private repo, invite us as collaborators.
 
 ## Answer following questions in the README.md file
 
