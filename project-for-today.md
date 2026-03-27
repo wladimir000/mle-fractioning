@@ -1,22 +1,34 @@
-# Project for today
+# Project for Today
 
-You will get a [jupyter notebook](./King-County.ipynb), with some EDA, Data cleaning, Feature Engineering and some ML models. The necessary libraries are listed in the [requirements.txt](./requirements.txt) file. You will have to do the following:
+You will work with the [Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
 
-- Refactor the code for the data cleaning and feature engineering segments into python files.
-- Build a pipeline for the data cleaning, feature engineering.
+Your main tasks are:
 
-If you still have time:
+- Refactor the data-cleaning and feature-engineering code into Python files.
+- Build a reusable pipeline for data cleaning and feature engineering.
 
-- Build a FastAPI app, that allows you to Create, Read, Update, and Delete houses with 5 features to/from a database.
-- Create a Dockerfile for the app.
-- Run the app in a docker container.
+If you still have time, continue with the stretch tasks:
 
-**BONUS:** Write tests!
+- Build a FastAPI app that supports Create, Read, Update, and Delete operations for houses stored in a database, using 5 features.
+- Create a `Dockerfile` for the app.
+- Run the app inside a Docker container.
 
-Push the code to your github repo and share the link with us in Discord. If it is a private repo, invite us as collaborators.
+**Bonus:** Write tests.
 
-## Answer following questions in the README.md file
+```mermaid
+flowchart TD
+    A[Review the notebook] --> B[Refactor cleaning and feature engineering into Python files]
+    B --> C[Build a reusable pipeline]
+    C --> D[Optional: build the FastAPI CRUD app]
+    D --> E[Optional: add Docker support]
+    E --> F[Optional: run the app in a container]
+    C --> G[Bonus: write tests]
+```
 
-- What are the steps you took to complete the project?
-- What are the challenges you faced?
-- What are the things you would do differently if you had more time?
+Push your code to your GitHub repository and share the link with us on Discord. If the repository is private, invite us as collaborators.
+
+## Answer the Following Questions in `README.md`
+
+- What steps did you take to complete the project?
+- What challenges did you face?
+- What would you do differently if you had more time?
