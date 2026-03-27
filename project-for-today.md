@@ -13,6 +13,8 @@ If you still have time, continue with the stretch tasks:
 - Create a `Dockerfile` for the app.
 - Run the app inside a Docker container.
 
+If you want a working reference for this optional stretch goal, see [bonus_solution/](./bonus_solution/). It includes a minimal FastAPI + Postgres + Docker example and is meant as a guide, not a required structure.
+
 **Bonus:** Write tests.
 
 ```mermaid
