@@ -10,7 +10,8 @@ The task for today you can find in the [project-for-today.md](./project-for-toda
 
 The necessary libraries are listed in the [requirements.txt](./requirements.txt) file. You can install them with the following commands:
 
-#### **`macOS`**
+### **`macOS`**
+
 ```BASH
   pyenv local 3.11.3
   python -m venv .venv
@@ -18,7 +19,9 @@ The necessary libraries are listed in the [requirements.txt](./requirements.txt)
   pip install --upgrade pip
   pip install -r requirements.txt
   ```
-#### **`WindowsOS`**
+
+#### **`Windows`**
+
  For `PowerShell` CLI :
 
   ```PowerShell
@@ -31,7 +34,7 @@ The necessary libraries are listed in the [requirements.txt](./requirements.txt)
 
   For `Git-Bash` CLI :
 
-  ```
+  ```text
   pyenv local 3.11.3
   python -m venv .venv
   source .venv/Scripts/activate
