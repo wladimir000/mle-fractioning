@@ -1,6 +1,6 @@
 # Refactoring Project
 
-Please **use this repository as a template** for your refactoring project. Create pull requests in your own repository even if you are working alone, and mark the completed checkboxes with an `x` in the pull request message.
+Please **use this repository as a template** for your refactoring project. Create pull requests in your own repository even if you are working alone, and use them to track the work you complete.
 
 ## Project Hub
 
@@ -18,6 +18,8 @@ If you want to explore the optional stretch goal, there is also a working refere
 - `project-for-today.md`: the required tasks and stretch goals
 - `bonus_solution/`: a small FastAPI + Postgres + Docker reference solution for the optional CRUD task
 - `requirements.txt`: notebook dependencies for the main project
+
+The notebook includes a modeling section as well. For the core project, you only need to refactor the data cleaning and feature engineering parts, but the modeling cells show how those processed features are used later in a machine learning workflow.
 
 ## Environment
 
@@ -63,7 +65,8 @@ The [requirements.txt](requirements.txt) file contains all libraries and depende
 2. Work through the notebook in [King-County.ipynb](./King-County.ipynb).
 3. Refactor the cleaning and feature engineering logic into Python files.
 4. Build a reusable pipeline.
-5. If you want to go further, use [bonus_solution/](./bonus_solution/) as a reference for the optional FastAPI + Docker stretch goal.
+5. If you want an extra challenge, extend your refactor to cover the modeling step as well.
+6. If you want to go further, use [bonus_solution/](./bonus_solution/) as a reference for the optional FastAPI + Docker stretch goal.
 
 ## Bonus Solution
 

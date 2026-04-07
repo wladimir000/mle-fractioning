@@ -2,6 +2,8 @@
 
 You will work with the [King County Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
 
+The main focus of this project is the refactoring of the data cleaning and feature engineering workflow. The modeling section stays in the notebook so you can see how those transformed features are used later in a full machine learning workflow.
+
 ## Main tasks
 
 - Refactor the data cleaning and feature engineering code into Python files.
@@ -9,6 +11,7 @@ You will work with the [King County Jupyter notebook](./King-County.ipynb), whic
 
 ### Stretch tasks
 
+- Refactor the modeling step as well, or extend your pipeline so it also supports the training workflow.
 - Build a FastAPI app that supports Create, Read, Update and Delete operations for houses stored in a database, using 5 features.
 - Create a `Dockerfile` for the app.
 - Run the app inside a Docker container.
@@ -23,13 +26,12 @@ If you want a working reference for this optional stretch goal, see [bonus_solut
 flowchart TD
     A[Review the notebook] --> B[Refactor cleaning and feature engineering into Python files]
     B --> C[Build a reusable pipeline]
-    C --> D[Optional: Build the FastAPI CRUD app]
-    D --> E[Optional: Add Docker support]
-    E --> F[Optional: Run the app in a container]
-    C --> G[Extra: Write tests]
+    C --> D[Optional: Extend the refactor to the modeling step]
+    C --> E[Optional: Build the FastAPI CRUD app]
+    E --> F[Optional: Add Docker support]
+    F --> G[Optional: Run the app in a container]
+    C --> H[Extra: Write tests]
 ```
-
-Push your code to your GitHub repository and share the link with us on Discord. If the repository is private, invite us as collaborators.
 
 ## Answer the following questions in `README.md`
 
