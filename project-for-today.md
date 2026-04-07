@@ -1,35 +1,36 @@
 # Project for Today
 
-You will work with the [Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
+You will work with the [King County Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
 
-Your main tasks are:
+### Main tasks:
 
-- Refactor the data-cleaning and feature-engineering code into Python files.
+- Refactor the data cleaning and feature engineering code into Python files.
 - Build a reusable pipeline for data cleaning and feature engineering.
 
-If you still have time, continue with the stretch tasks:
+### Stretch tasks:
 
-- Build a FastAPI app that supports Create, Read, Update, and Delete operations for houses stored in a database, using 5 features.
+- Build a FastAPI app that supports Create, Read, Update and Delete operations for houses stored in a database, using 5 features.
 - Create a `Dockerfile` for the app.
 - Run the app inside a Docker container.
 
 If you want a working reference for this optional stretch goal, see [bonus_solution/](./bonus_solution/). It includes a minimal FastAPI + Postgres + Docker example and is meant as a guide, not a required structure.
 
-**Bonus:** Write tests.
+### Extra (if you still have time):
+- Write tests.
 
 ```mermaid
 flowchart TD
     A[Review the notebook] --> B[Refactor cleaning and feature engineering into Python files]
     B --> C[Build a reusable pipeline]
-    C --> D[Optional: build the FastAPI CRUD app]
-    D --> E[Optional: add Docker support]
-    E --> F[Optional: run the app in a container]
-    C --> G[Bonus: write tests]
+    C --> D[Optional: Build the FastAPI CRUD app]
+    D --> E[Optional: Add Docker support]
+    E --> F[Optional: Run the app in a container]
+    C --> G[Extra: Write tests]
 ```
 
 Push your code to your GitHub repository and share the link with us on Discord. If the repository is private, invite us as collaborators.
 
-## Answer the Following Questions in `README.md`
+## Answer the following questions in `README.md`
 
 - What steps did you take to complete the project?
 - What challenges did you face?

@@ -6,8 +6,8 @@ This folder contains a small, working reference implementation for the optional 
 
 - A minimal FastAPI CRUD API
 - A Postgres database
-- A Dockerfile for the API
-- A `docker-compose.yml` file that starts both services together
+- A `Dockerfile` for the API
+- A `docker-compose.yaml` file that starts both services together
 
 ## House Resource
 
