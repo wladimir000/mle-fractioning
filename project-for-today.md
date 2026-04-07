@@ -2,12 +2,12 @@
 
 You will work with the [King County Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
 
-### Main tasks:
+## Main tasks
 
 - Refactor the data cleaning and feature engineering code into Python files.
 - Build a reusable pipeline for data cleaning and feature engineering.
 
-### Stretch tasks:
+### Stretch tasks
 
 - Build a FastAPI app that supports Create, Read, Update and Delete operations for houses stored in a database, using 5 features.
 - Create a `Dockerfile` for the app.
@@ -15,7 +15,8 @@ You will work with the [King County Jupyter notebook](./King-County.ipynb), whic
 
 If you want a working reference for this optional stretch goal, see [bonus_solution/](./bonus_solution/). It includes a minimal FastAPI + Postgres + Docker example and is meant as a guide, not a required structure.
 
-### Extra (if you still have time):
+### Extra (if you still have time)
+
 - Write tests.
 
 ```mermaid

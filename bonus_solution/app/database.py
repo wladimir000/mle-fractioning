@@ -1,22 +1,15 @@
-"""Database configuration for the FastAPI bonus solution.
-
-This module keeps the SQLAlchemy setup in one place so the rest of the app can
-focus on request handling and data modeling.
-"""
-
-from __future__ import annotations
+"""Database configuration for the FastAPI bonus solution."""
 
 import os
-from collections.abc import Generator
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+from sqlalchemy.orm import declarative_base, sessionmaker
 
 
 def _default_database_url() -> str:
     """Build the default Postgres connection string from environment variables."""
-    # Keep local Docker development simple by deriving the URL from the
-    # same env vars used by docker-compose.
+    # These defaults match the service names and credentials in docker-compose,
+    # so the app can connect without extra local setup.
     return (
         "postgresql+psycopg://"
         f"{os.getenv('POSTGRES_USER', 'postgres')}:"
@@ -29,21 +22,21 @@ def _default_database_url() -> str:
 
 DATABASE_URL = os.getenv("DATABASE_URL", _default_database_url())
 
-
-class Base(DeclarativeBase):
-    """Base class for SQLAlchemy models."""
-
-
-engine = create_engine(DATABASE_URL, future=True)
-# Use one short-lived session per request so handlers can commit independently
-# without sharing state across requests.
-SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+# Keep the SQLAlchemy setup in one place so the route handlers stay focused on
+# request and response logic.
+engine = create_engine(DATABASE_URL)
+# Disable autocommit so each route controls when its changes are saved.
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# All ORM models inherit from this shared base class.
+Base = declarative_base()
 
 
-def get_db() -> Generator[Session, None, None]:
+def get_db():
     """Yield one SQLAlchemy session per request and close it afterward."""
-    session = SessionLocal()
+    # FastAPI treats this generator as a dependency and injects one session
+    # into each request handler that asks for it.
+    db = SessionLocal()
     try:
-        yield session
+        yield db
     finally:
-        session.close()
+        db.close()

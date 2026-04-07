@@ -1,6 +1,6 @@
 # Bonus Solution
 
-This folder contains a small, working reference implementation for the optional stretch goal from the project brief. It is meant to be a runnable example, not the only correct way to solve the bonus task.
+This folder contains a small, working reference implementation for the optional stretch goal from the project brief. It stays close to the patterns used in the API lecture so it is easier to compare with what you have already seen in class. It is meant to be a runnable example, not the only correct way to solve the bonus task.
 
 ## What It Includes
 

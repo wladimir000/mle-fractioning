@@ -1,21 +1,11 @@
-"""Pydantic schemas for the FastAPI bonus solution.
-
-These schemas define the public API contract for request validation and
-response serialization.
-"""
-
-from __future__ import annotations
+"""Pydantic schemas for the FastAPI bonus solution."""
 
 from pydantic import BaseModel, ConfigDict, Field
 
 
 class HouseBase(BaseModel):
-    """Shared house fields used by create and update requests.
-
-    The field constraints keep the example small while still showing how input
-    validation can live close to the API boundary.
-    """
-
+    # Keep the shared field validation in one place so create, update, and read
+    # schemas all use the same shape and constraints.
     bedrooms: int = Field(ge=0, le=20)
     bathrooms: float = Field(ge=0, le=20)
     sqft_living: int = Field(ge=100)
@@ -28,13 +18,15 @@ class HouseCreate(HouseBase):
 
 
 class HouseUpdate(HouseBase):
+    # This example uses a full replacement update, so it has the same required
+    # fields as the create payload.
     """Request payload for replacing a house."""
 
 
 class HouseRead(HouseBase):
     """Response payload for house resources."""
 
-    # Allow FastAPI to serialize directly from SQLAlchemy model instances.
+    # Allow FastAPI to return SQLAlchemy model instances directly.
     model_config = ConfigDict(from_attributes=True)
 
     id: int
