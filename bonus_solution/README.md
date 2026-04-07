@@ -1,6 +1,6 @@
 # Bonus Solution
 
-This folder contains a small, working reference implementation for the optional stretch goal from the project brief. It stays close to the patterns used in the API lecture so it is easier to compare with what you have already seen in class. It is meant to be a runnable example, not the only correct way to solve the bonus task.
+This folder contains a small, working reference implementation for the optional stretch goal from the project brief. It stays close to the patterns used in the API lecture so it is easier to compare with what you have already seen. It is meant to be a runnable example, not the only correct way to solve the bonus task.
 
 ## What It Includes
 
@@ -30,8 +30,12 @@ The example `House` resource stores the following five fields:
 ## Run the Stack
 
 1. Copy `.env.example` to `.env` if you want to customize the defaults.
-2. From this folder, run `docker compose up --build`.
-3. Open `http://localhost:8000/docs` to explore the API.
+2. From this folder, run:
+
+```bash
+docker compose up --build
+```
+3. Open <http://localhost:8000/docs> to explore the API.
 
 ## Local Example Request
 
