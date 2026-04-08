@@ -32,7 +32,7 @@ pyenv local 3.11.3
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### `Windows`
@@ -44,7 +44,7 @@ pyenv local 3.11.3
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 For `Git-Bash` CLI:
@@ -54,7 +54,7 @@ pyenv local 3.11.3
 python -m venv .venv
 source .venv/Scripts/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 The [requirements.txt](requirements.txt) file contains all libraries and dependencies needed to execute the notebook.
