@@ -74,7 +74,7 @@ The [bonus_solution/](./bonus_solution/) folder contains a minimal working examp
 
 - a FastAPI CRUD API
 - Postgres persistence
-- a Dockerfile for the API
+- a `Dockerfile` for the API
 - a `docker-compose.yaml` file to run the API and database together
 
 It is included as a reference implementation for the optional stretch task, not as a required project structure.
