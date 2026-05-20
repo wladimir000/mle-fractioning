@@ -35,6 +35,7 @@ The example `House` resource stores the following five fields:
 ```bash
 docker compose up --build
 ```
+
 3. Open <http://localhost:8000/docs> to explore the API.
 
 ## Local Example Request
