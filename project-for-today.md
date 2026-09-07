@@ -1,8 +1,8 @@
 # Project for Today
 
-You will work with the [King County Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several machine learning models. The required libraries are listed in [requirements.txt](./requirements.txt).
+You will work with the [King County Jupyter notebook](./King-County.ipynb), which already contains exploratory data analysis, data cleaning, feature engineering, and several Machine Learning models.
 
-The main focus of this project is the refactoring of the data cleaning and feature engineering workflow. The modeling section stays in the notebook so you can see how those transformed features are used later in a full machine learning workflow.
+The main focus of this project is the refactoring of the data cleaning and feature engineering workflow. The modeling section stays in the notebook so you can see how those transformed features are used later in a full Machine Learning workflow.
 
 ## Main tasks
 
@@ -22,6 +22,8 @@ If you want a working reference for this optional stretch goal, see [bonus_solut
 
 - Write tests.
 
+## Workflow
+
 ```mermaid
 flowchart TD
     A[Review the notebook] --> B[Refactor cleaning and feature engineering into Python files]
@@ -33,7 +35,7 @@ flowchart TD
     C --> H[Extra: Write tests]
 ```
 
-## Answer the following questions in `README.md`
+## Answer the following questions
 
 - What steps did you take to complete the project?
 - What challenges did you face?
