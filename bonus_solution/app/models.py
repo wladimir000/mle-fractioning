@@ -1,19 +1,17 @@
 """SQLAlchemy models for the FastAPI bonus solution."""
 
-from sqlalchemy import Column, Float, Integer, String
+from sqlalchemy import Float, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
 
-from .database import Base
+from app.database import Base
 
 
 class House(Base):
-    # Map this model to the `houses` table in Postgres.
     __tablename__ = "houses"
 
-    # The columns below mirror the five fields required in the stretch goal,
-    # plus an integer primary key used to identify each row.
-    id = Column(Integer, primary_key=True, index=True)
-    bedrooms = Column(Integer, nullable=False)
-    bathrooms = Column(Float, nullable=False)
-    sqft_living = Column(Integer, nullable=False)
-    grade = Column(Integer, nullable=False)
-    zipcode = Column(String(10), nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    bedrooms: Mapped[int] = mapped_column(Integer)
+    bathrooms: Mapped[float] = mapped_column(Float)
+    sqft_living: Mapped[int] = mapped_column(Integer)
+    grade: Mapped[int] = mapped_column(Integer)
+    zipcode: Mapped[str] = mapped_column(String(10))

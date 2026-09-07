@@ -29,12 +29,18 @@ The example `House` resource stores the following five fields:
 
 ## Run the Stack
 
-1. Copy `.env.example` to `.env` if you want to customize the defaults.
+1. Copy `.env.example` to `.env`:
+
+```bash
+cp .env.example .env
+```
+
 2. From this folder, run:
 
 ```bash
-docker compose up --build
+docker compose up --build --wait
 ```
+
 3. Open <http://localhost:8000/docs> to explore the API.
 
 ## Local Example Request
@@ -54,5 +60,6 @@ curl -X POST http://localhost:8000/houses \
 ## Notes
 
 - Tables are created automatically when the API starts.
-- The database is persisted in the `postgres_data` Docker volume.
+- The database is persisted in the `postgres-data` Docker volume.
+- Dependencies are managed with `uv` and `pyproject.toml`, and the image is built with `uv` as well, matching the rest of the modernized course material.
 - This example is intentionally small so it is easy to study and adapt.
