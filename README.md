@@ -1,76 +1,116 @@
 # Refactoring Project
 
-Please **use this repository as a template** for your refactoring project. Create pull requests in your own repository even if you are working alone, and use them to track the work you complete.
+Use this repository as a **template** for your refactoring project. It walks you through turning a working but messy notebook into clean, reusable Python code: the notebook analyzes King County house sales, and your job is to extract its data cleaning and feature engineering logic into a proper pipeline. Create pull requests in your own copy even if you are working alone, and use them to track your progress.
 
-## Project Hub
+## Learning Objectives
 
-This repository includes three main entry points:
+By the end of this repository, you should be able to:
 
-- [README.md](./README.md): setup instructions and project navigation
-- [project-for-today.md](./project-for-today.md): the assignment brief
-- [King-County.ipynb](./King-County.ipynb): the notebook used for the refactoring task
+- Read and understand an existing Data Science notebook well enough to refactor it.
+- Refactor data cleaning and feature engineering code into reusable Python functions.
+- Build a pipeline that reproduces a notebook's preprocessing steps end to end.
+- Apply the same refactoring approach to a modeling workflow (stretch goal).
+- Build and containerize a FastAPI CRUD service backed by a database (stretch goal).
 
-If you want to explore the optional stretch goal, there is also a working reference implementation in [bonus_solution/](./bonus_solution/).
+## Learning Path
 
-## Repository Guide
+| File / Folder | Description |
+|---|---|
+| [**Project Brief**](project-for-today.md) | The assignment tasks and stretch goals. |
+| [**King County Notebook**](King-County.ipynb) | The original notebook: EDA, cleaning, feature engineering, and modeling for King County house prices. |
 
-- `King-County.ipynb`: the original notebook with EDA, cleaning, feature engineering, and modeling
-- `project-for-today.md`: the required tasks and stretch goals
-- `bonus_solution/`: a small FastAPI + Postgres + Docker reference solution for the optional CRUD task
-- `requirements.txt`: notebook dependencies for the main project
+### Additional Folders and Files
 
-The notebook includes a modeling section as well. For the core project, you only need to refactor the data cleaning and feature engineering parts, but the modeling cells show how those processed features are used later in a machine learning workflow.
+| File / Folder | Description |
+|---|---|
+| [**data**](data/) | The King County house price dataset used by the notebook. |
+| [**assets**](assets/) | Visual aids referenced in the notebook. |
+| [**bonus_solution**](bonus_solution/) | A FastAPI + Postgres + Docker reference implementation for the optional CRUD stretch goal. |
+| [**pyproject.toml**](pyproject.toml) | Project configuration and dependencies. |
+| [**uv.lock**](uv.lock) | Dependency lock file. |
 
-## Environment
+## Setup
 
-Please set up a new virtual environment. You can use the following commands:
+> [!NOTE]
+> Throughout these steps, text in angle brackets like `<repo-name>` is a **placeholder**. Replace it, including the `< >` brackets, with your own value. For example, `cd <repo-name>` becomes `cd mle-refactoring-project`.
 
-### `macOS`
+### 1. Create the Repository from the Template
+
+Click **Use this template** on GitHub.
+
+When creating the repository:
+
+- Set yourself as the **Owner**
+- Choose a repository name
+- Disable **Include all branches**
+- Click **Create repository**
+
+> [!IMPORTANT]
+> If you are working in pairs or groups, only **one person** should complete this step.
+
+---
+
+### 2. Add Collaborators (Pairs/Groups Only)
+
+If working with teammates:
+
+1. Open the repository on GitHub
+2. Go to **Settings → Collaborators**
+3. Add your teammates as collaborators
+4. Share the repository link with your team
+
+Teammates should accept the invitation before continuing.
+
+---
+
+### 3. Clone the Repository
+
+Copy the SSH URL from the **Code** button on GitHub, then run:
 
 ```bash
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+git clone <copied-ssh-url>
 ```
 
-### `Windows`
+The copied SSH URL will look like `git@github.com:<your-username>/<repo-name>.git`.
 
-For `PowerShell` CLI:
+---
 
-```PowerShell
-pyenv local 3.11.3
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
+### 4. Move into the Project Folder and Install Dependencies
 
-For `Git-Bash` CLI:
+This installs all dependencies and creates a virtual environment in `.venv/`.
 
 ```bash
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/Scripts/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+cd <repo-name>
+uv sync
 ```
 
-The [requirements.txt](requirements.txt) file contains all libraries and dependencies needed to execute the notebook.
+---
 
-## Suggested Workflow
+### 5. Open the Notebook
 
-1. Read the assignment brief in [project-for-today.md](./project-for-today.md).
-2. Work through the notebook in [King-County.ipynb](./King-County.ipynb).
+> [!NOTE]
+> Make sure you open VS Code from the project root so it automatically detects the environment created by `uv sync`.
+
+Launch VS Code in the project root folder:
+
+```bash
+code .
+```
+
+Then open [King-County.ipynb](King-County.ipynb) and select the Python environment created by `uv sync` as the kernel.
+
+## How to Use This Repo
+
+1. Read the assignment brief in [project-for-today.md](project-for-today.md).
+2. Work through the notebook in [King-County.ipynb](King-County.ipynb).
 3. Refactor the cleaning and feature engineering logic into Python files.
 4. Build a reusable pipeline.
 5. If you want an extra challenge, extend your refactor to cover the modeling step as well.
-6. If you want to go further, use [bonus_solution/](./bonus_solution/) as a reference for the optional FastAPI + Docker stretch goal.
+6. If you want to go even further, use [bonus_solution/](bonus_solution/) as a reference for the optional FastAPI + Docker stretch goal.
 
 ## Bonus Solution
 
-The [bonus_solution/](./bonus_solution/) folder contains a minimal working example of:
+The [bonus_solution/](bonus_solution/) folder contains a minimal working example of:
 
 - a FastAPI CRUD API
 - Postgres persistence
